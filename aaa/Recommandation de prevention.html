@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recommandations de prévention · AAA</title>
+<meta name="description" content="Recommandations de prévention de l'AAA : bibliothèque à facettes — filtrez par secteur et par risque.">
+<link rel="stylesheet" href="aaa.css">
+<link rel="stylesheet" href="prevention.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="util.a11y">Accessibilité</a>
+
+<!-- ============ UTILITY BAR · composant « bandeau État » ============ -->
+<div class="utility" data-component="Bandeau État · langue">
+  <div class="wrap">
+    <a class="gov" href="#0">
+      <img class="gov-emblem" src="assets/lion-lu.png" alt="" aria-hidden="true" width="188" height="198">
+      <span data-i18n="util.official">Un site officiel de l'État luxembourgeois</span>
+    </a>
+    <div class="utility-right">
+      <a class="a11y-link" href="#0">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="4" r="1.6" fill="currentColor" stroke="none"/><path d="M4 8h16M9 8v5l-2 6M15 8v5l2 6M9 13h6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="util.a11y">Accessibilité</span>
+      </a>
+      <nav class="lang" aria-label="Langue / Sprache / Language">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER · composant « en-tête + navigation » ============ -->
+<header class="header" data-component="En-tête + navigation principale">
+  <div class="header-bar">
+    <div class="wrap">
+      <a class="brand" href="Accueil.html" aria-label="AAA — Association d'assurance accident, accueil">
+        <span class="aaa-mark">
+          <img class="aaa-logo-img" src="assets/logo.png" alt="AAA — Association d'assurance accident" width="229" height="120">
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <button class="icon-btn" type="button" data-i18n-aria="header.searchAria" aria-label="Rechercher sur le site">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <a class="btn btn--red btn-declare" href="Accident du travail et de trajet.html">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          <span class="label" data-i18n="header.declare">Déclarer un accident</span>
+        </a>
+        <button class="icon-btn burger" type="button" aria-expanded="false" data-i18n-aria="header.menu" aria-label="Menu">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="mainnav" aria-label="Navigation principale">
+    <div class="wrap">
+      <ul>
+        <li class="has-sub">
+          <a href="#0" data-i18n="nav.aaa" aria-haspopup="true" aria-expanded="false">L'AAA<svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav"><ul>
+            <li><a href="#0" data-i18n="sm.aaa.vision">Vision</a></li>
+            <li><a href="#0" data-i18n="sm.aaa.mission">Mission</a></li>
+            <li><a href="#0" data-i18n="sm.aaa.orga">Organisation</a></li>
+            <li><a href="#0" data-i18n="sm.aaa.rapport">Rapport annuel & statistiques</a></li>
+            <li><a href="#0" data-i18n="sm.aaa.iso">Démarche qualité</a></li>
+          </ul></div>
+        </li>
+        <li class="has-sub">
+          <a href="#0" aria-current="page" data-i18n="nav.sst" aria-haspopup="true" aria-expanded="false">Sécurité &amp; santé au travail<svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav"><ul>
+            <li><a href="#0" data-i18n="sm.sst.conseil">Conseil SST</a></li>
+            <li><a href="Recommandation de prevention.html" aria-current="page" data-i18n="sm.sst.reco">Recommandations de prévention</a></li>
+            <li><a href="#0" data-i18n="sm.sst.formations">Formations</a></li>
+            <li><a href="#0" data-i18n="sm.sst.regl">Réglementation</a></li>
+            <li><a href="#0" data-i18n="sm.sst.label">Label « Sécher a Gesond »</a></li>
+            <li><a href="#0" data-i18n="sm.sst.vz">VISION ZERO</a></li>
+          </ul></div>
+        </li>
+        <li class="has-sub">
+          <a href="#0" data-i18n="nav.accidents" aria-haspopup="true" aria-expanded="false">Accidents &amp; maladies prof.<svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav"><ul>
+            <li><a href="Accident du travail et de trajet.html" data-i18n="sm.acc.travail">Accident du travail / de trajet</a></li>
+            <li><a href="#0" data-i18n="sm.acc.scolaire">Accident scolaire / périscolaire</a></li>
+            <li><a href="#0" data-i18n="sm.acc.maladies">Maladies professionnelles</a></li>
+          </ul></div>
+        </li>
+        <li class="has-sub">
+          <a href="#0" data-i18n="nav.prestations" aria-haspopup="true" aria-expanded="false">Prestations &amp; cotisations<svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav"><ul>
+            <li><a href="#0" data-i18n="sm.pre.assurees">Personnes assurées</a></li>
+            <li><a href="#0" data-i18n="sm.pre.indemn">Indemnisations</a></li>
+            <li><a href="#0" data-i18n="sm.pre.cotis">Cotisations</a></li>
+            <li><a href="#0" data-i18n="sm.pre.videos">Vidéos explicatives</a></li>
+          </ul></div>
+        </li>
+        <li class="has-sub">
+          <a href="#0" data-i18n="nav.doc" aria-haspopup="true" aria-expanded="false">Documentation<svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav"><ul>
+            <li><a href="#0" data-i18n="sm.doc.formulaires">Formulaires</a></li>
+            <li><a href="#0" data-i18n="sm.doc.publications">Publications</a></li>
+            <li><a href="#0" data-i18n="sm.doc.legis">Législations / Jurisprudence</a></li>
+          </ul></div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- mobile nav drawer -->
+<div class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="panel">
+    <div class="mn-head">
+      <img class="aaa-logo-img" src="assets/logo.png" alt="AAA" width="229" height="120" style="height:44px;">
+      <button class="icon-btn" type="button" data-close data-i18n-aria="header.close" aria-label="Fermer">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <a class="mn-top" href="#0" data-i18n="nav.aaa">L'AAA</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.aaa.vision">Vision</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.aaa.mission">Mission</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.aaa.orga">Organisation</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.aaa.rapport">Rapport annuel & statistiques</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.aaa.iso">Démarche qualité</a>
+    <a class="mn-top" href="#0" aria-current="page" data-i18n="nav.sst">Sécurité &amp; santé au travail</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.sst.conseil">Conseil SST</a>
+    <a class="mn-sub" href="Recommandation de prevention.html" data-i18n="sm.sst.reco">Recommandations de prévention</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.sst.formations">Formations</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.sst.regl">Réglementation</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.sst.label">Label « Sécher a Gesond »</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.sst.vz">VISION ZERO</a>
+    <a class="mn-top" href="#0" data-i18n="nav.accidents">Accidents &amp; maladies prof.</a>
+    <a class="mn-sub" href="Accident du travail et de trajet.html" data-i18n="sm.acc.travail">Accident du travail / de trajet</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.acc.scolaire">Accident scolaire / périscolaire</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.acc.maladies">Maladies professionnelles</a>
+    <a class="mn-top" href="#0" data-i18n="nav.prestations">Prestations &amp; cotisations</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.pre.assurees">Personnes assurées</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.pre.indemn">Indemnisations</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.pre.cotis">Cotisations</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.pre.videos">Vidéos explicatives</a>
+    <a class="mn-top" href="#0" data-i18n="nav.doc">Documentation</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.doc.formulaires">Formulaires</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.doc.publications">Publications</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.doc.legis">Législations / Jurisprudence</a>
+      </div>
+      </aside>
+    </div>
+
+    <div class="wrap prev-shell">
+      <aside class="filter-rail" data-component="Rail de filtres à facettes" aria-label="Filtres">
+        <div class="rail-head"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4-2v-4Z"/></svg><h2 data-i18n="prev.filters">Filtres</h2></div>
+        <div class="rail-search">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <label for="doc-search" class="sr-only" data-i18n="prev.searchLabel">Rechercher un document</label>
+          <input id="doc-search" type="search" data-i18n-ph="prev.searchPh" placeholder="Rechercher…">
+        </div>
+        <div class="rail-facet">
+          <span class="facet-label" id="lbl-sector" data-i18n="prev.bySector">Filtrer par secteur d'activité</span>
+          <div class="chips" id="sector-chips" role="group" aria-labelledby="lbl-sector"></div>
+        </div>
+        <div class="rail-facet">
+          <span class="facet-label" id="lbl-risk" data-i18n="prev.byRisk">Filtrer par type de risque</span>
+          <div class="chips" id="risk-chips" role="group" aria-labelledby="lbl-risk"></div>
+        </div>
+        <button class="btn-reset rail-reset" id="reset-filters" type="button" hidden>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+          <span data-i18n="prev.reset">Réinitialiser les filtres</span>
+        </button>
+      </aside>
+
+      <div class="prev-results">
+        <div class="results-bar">
+          <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+          <div class="active-pills" id="active-filters" aria-label="Filtres actifs"></div>
+          <div class="sort-wrap">
+            <label for="sort" data-i18n="prev.sort">Trier :</label>
+            <select id="sort">
+              <option value="relevance" data-i18n="prev.sortRelevance">Pertinence</option>
+              <option value="az" data-i18n="prev.sortAz">A → Z</option>
+              <option value="recent" data-i18n="prev.sortRecent">Plus récents</option>
+            </select>
+          </div>
+        </div>
+        <div class="doc-grid" id="doc-grid" aria-label="Documents"></div>
+        <p class="doc-empty" id="doc-empty" hidden data-i18n="prev.empty">Aucun document ne correspond à votre recherche. Modifiez ou réinitialisez les filtres.</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="help-band">
+        <div class="aside-card aside-card--blue" data-component="Encadré contact Service Prévention">
+          <h2 data-i18n="prev.svc.title">Service Prévention</h2>
+          <p data-i18n="prev.svc.desc">Conseil, formations et recommandations gratuits pour les entreprises affiliées.</p>
+          <div class="ac-row"><span class="sr-only" data-i18n="ct.tel">Téléphone</span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><a href="tel:+3522619152201">(+352) 261915-2201</a></div>
+          <div class="ac-row"><span class="sr-only" data-i18n="ct.mail">Courriel</span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:prevention.aaa@secu.lu">prevention.aaa@secu.lu</a></div>
+          <div class="ac-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="ac-sub" data-i18n="contact.hours">Lun – Ven · 8h00 – 16h00</span></div>
+          <a class="btn btn--white" href="#0"><span data-i18n="prev.svc.cta">Demander un conseil</span></a>
+        </div>
+        <div class="aside-card" data-component="Encadré références légales">
+          <h2 data-i18n="prev.legal.title">Références légales</h2>
+          <ul class="legal-list">
+            <li><a href="#0"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14l-3 7H8L5 7Z"/><path d="M5 7 3 13M19 7l2 6"/></svg><span>Art. 162 &amp; 163 — Code de la sécurité sociale</span></a></li>
+            <li><a href="#0"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14l-3 7H8L5 7Z"/><path d="M5 7 3 13M19 7l2 6"/></svg><span>Code du travail — Livre III « Protection, sécurité et santé »</span></a></li>
+            <li><a href="#0"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14l-3 7H8L5 7Z"/><path d="M5 7 3 13M19 7l2 6"/></svg><span>Règlements grand-ducaux (exécution du Livre III)</span></a></li>
+            <li><a href="#0"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14l-3 7H8L5 7Z"/><path d="M5 7 3 13M19 7l2 6"/></svg><span>Légilux — textes coordonnés SST</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<!-- ============ FOOTER · composant « pied de page institutionnel » ============ -->
+<footer class="footer" data-component="Pied de page institutionnel">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="f-mark">
+          <img class="aaa-logo-img" src="assets/logo-white.png" alt="AAA — Association d'assurance accident" width="229" height="120" style="height:60px;">
+        </div>
+        <p data-i18n="footer.about">Établissement public sous la tutelle du Ministère de la Santé et de la Sécurité sociale. Prévention et indemnisation des accidents du travail, de trajet et des maladies professionnelles.</p>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.c1">Le site</h3>
+        <ul>
+          <li><a href="#0" data-i18n="footer.l.sitemap">Plan du site</a></li>
+          <li><a href="#0" data-i18n="footer.l.news">Actualités</a></li>
+          <li><a href="#0" data-i18n="footer.l.publications">Publications</a></li>
+          <li><a href="#0" data-i18n="footer.l.forms">Formulaires</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.c2">Aide &amp; contact</h3>
+        <ul>
+          <li><a href="#0" data-i18n="footer.l.faq">FAQ</a></li>
+          <li><a href="#0" data-i18n="footer.l.contact">Contact</a></li>
+          <li><a href="#0" data-i18n="footer.l.jobs">Recrutement</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.c3">Informations légales</h3>
+        <ul>
+          <li><a href="#0" data-i18n="footer.l.a11y">Déclaration d'accessibilité</a></li>
+          <li><a href="#0" data-i18n="footer.l.legal">Mentions légales</a></li>
+          <li><a href="#0" data-i18n="footer.l.privacy">Protection des données</a></li>
+          <li><a href="#0" data-i18n="footer.l.cookies">Gestion des cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-badges">
+        <span class="f-badge">RENOW</span>
+        <span class="f-badge">ISO 9001:2015</span>
+        <span class="f-badge">RGAA · WCAG 2.1 AA</span>
+        <span class="f-badge">CTIE · gouvernement.lu</span>
+      </div>
+      <div class="footer-social">
+        <a href="#0" aria-label="LinkedIn"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM0 8h5v16H0V8Zm7.5 0h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5 5.05 0 6 3.3 6 7.6V24h-5v-7c0-1.7 0-3.8-2.4-3.8-2.4 0-2.7 1.8-2.7 3.7V24h-5V8Z"/></svg></a>
+        <a href="#0" aria-label="YouTube"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.8 12 4.8 12 4.8s-7 0-8.9.6A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.6 8.9.6 8.9.6s7 0 8.9-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.5 12 31 31 0 0 0 23 7.5ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg></a>
+        <a href="#0" aria-label="Newsletter"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      </div>
+    </div>
+    <p class="footer-legal" style="margin-top:24px;"><span data-i18n="footer.legal">© 2026 Association d'assurance accident — Cité de la sécurité sociale, Luxembourg.</span></p>
+  </div>
+</footer>
+
+<button class="cmp-toggle" type="button" aria-pressed="false">
+  <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+  <span data-i18n="cmp.show">Voir les composants</span>
+</button>
+
+<script src="aaa.js"></script>
+<script src="prevention.js"></script>
+</body>
+</html>
