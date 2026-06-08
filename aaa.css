@@ -449,6 +449,25 @@ ul { margin: 0; padding: 0; list-style: none; }
 .chip.c2 { background: #E7F4EB; color: #1F7A43; }
 .chip.c3 { background: var(--aaa-red-050); color: var(--aaa-red-700); }
 .chip.c4 { background: #FFF4E0; color: #9A6712; }
+
+/* ---- Composants partagés (chips de filtres + encadré « En résumé ») ----
+   Promus depuis prevention.css pour être disponibles sur toute page qui les
+   utilise OU les démontre (ex. page Système de design). ---- */
+.chip-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 18px; border-radius: var(--r-pill); border: 1px solid var(--line); background: #fff; color: var(--ink-body); font-weight: 600; font-size: var(--fs-small); cursor: pointer; transition: background 140ms, border-color 140ms, color 140ms; }
+.chip-btn:hover { border-color: var(--aaa-blue); color: var(--aaa-blue); background: var(--aaa-blue-050); }
+.chip-btn[aria-pressed="true"] { background: var(--aaa-blue); border-color: var(--aaa-blue); color: #fff; }
+.chip-btn .chip-x { display: none; width: 16px; height: 16px; flex-shrink: 0; }
+.chip-btn[aria-pressed="true"] .chip-x { display: inline-flex; }
+.chip-x .ico, .chip-x svg { width: 16px; height: 16px; }
+
+.resume { display: flex; gap: var(--s5); background: var(--aaa-blue-050); border: 1px solid var(--line); border-radius: var(--r-lg); padding: var(--s6); margin-bottom: var(--s6); }
+.resume-ico { width: 52px; height: 52px; border-radius: var(--r); background: var(--aaa-blue); color: #fff; display: grid; place-items: center; flex-shrink: 0; }
+.resume-ico .ico { width: 28px; height: 28px; }
+.resume h2 { font-size: var(--fs-h3); font-weight: 800; color: var(--ink); margin-bottom: var(--s3); }
+.resume ul { display: flex; flex-direction: column; gap: 10px; }
+.resume li { position: relative; padding-left: 32px; color: var(--ink-body); line-height: 1.5; }
+.resume li::before { content: ""; position: absolute; left: 0; top: 1px; width: 21px; height: 21px; border-radius: 50%; background: var(--aaa-blue); }
+.resume li::after { content: ""; position: absolute; left: 6px; top: 7px; width: 9px; height: 5px; border-left: 2.5px solid #fff; border-bottom: 2.5px solid #fff; transform: rotate(-45deg); }
 .news-card h3 { font-size: 1.2rem; color: var(--ink); font-weight: 700; line-height: 1.25; }
 .news-card:hover h3 { color: var(--aaa-blue); }
 

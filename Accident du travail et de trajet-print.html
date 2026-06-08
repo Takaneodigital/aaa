@@ -175,6 +175,42 @@
 }
 
 </style>
+<style id="print-styles">
+@media print {
+  @page { size: A4 portrait; margin: 12mm 10mm; }
+  html, body { background: #fff !important; }
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important;
+    animation-delay: -99s !important; animation-duration: .001s !important;
+    animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+    animation-play-state: running !important; transition-duration: 0s !important;
+  }
+  /* masquer le chrome interactif non pertinent à l'impression */
+  .utility, .header, .mobile-nav, .cmp-toggle, .skip-link, .acc-toc, .burger,
+  .header-actions, .lang, .a11y-link { display: none !important; }
+  main#main { padding-top: 0 !important; }
+  .breadcrumb { padding-top: 0 !important; }
+  /* la mise en page colonne -> flux simple */
+  .acc-layout, .prev-shell, .prev-layout { display: block !important; }
+  .acc-aside, .prev-aside { position: static !important; width: auto !important; }
+  /* éviter les coupures au milieu des blocs */
+  section, .acc-sec, .def-card, .appeal, .faq-item, .timeline-step,
+  .resume, .contact-modern, .ct-feature, .ct-line, .doc-card, figure {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  .acc-hero { break-after: avoid; }
+  /* liens : afficher l'URL réelle quand utile (placeholders #0 ignorés) */
+  a[href^="http"]::after, a[href$=".html"]::after {
+    content: " (" attr(href) ")"; font-size: 0.75em; color: #5A6B75; font-weight: 400; word-break: break-all;
+  }
+  a[href="#0"]::after, .brand::after, .breadcrumb a::after { content: "" !important; }
+  /* hero : fond imprimable */
+  .acc-hero { background: #EAF3FA !important; }
+  /* neutraliser ombres lourdes */
+  .ct-feature, .doc-card, .resume { box-shadow: none !important; }
+}
+</style>
 </head>
 <body>
 
@@ -560,7 +596,6 @@
           <li><a href="#0" data-i18n="footer.l.news">Actualités</a></li>
           <li><a href="#0" data-i18n="footer.l.publications">Publications</a></li>
           <li><a href="#0" data-i18n="footer.l.forms">Formulaires</a></li>
-          <li><a href="Systeme de design.html" data-i18n="footer.l.ds">Système de design</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -835,6 +870,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+</script>
+<script>
+(function () {
+  function go() { setTimeout(function () { window.print(); }, 500); }
+  function ready() {
+    var fonts = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+    Promise.resolve(fonts).then(function () {
+      if (document.readyState === 'complete') go();
+      else window.addEventListener('load', go, { once: true });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready);
+  else ready();
+})();
 </script>
 </body>
 </html>
