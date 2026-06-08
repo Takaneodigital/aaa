@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Système de design · AAA</title>
+<meta name="description" content="Système de design de la refonte du site AAA : charte, composants et correspondance AEM, conforme RGAA / Renow.">
+<link rel="stylesheet" href="aaa.css">
+<link rel="stylesheet" href="ds.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="util.a11y">Accessibilité</a>
+
+<!-- ============ UTILITY BAR · composant « bandeau État » ============ -->
+<div class="utility" data-component="Bandeau État · langue">
+  <div class="wrap">
+    <a class="gov" href="#0">
+      <img class="gov-emblem" src="assets/lion-lu.png" alt="" aria-hidden="true" width="188" height="198">
+      <span data-i18n="util.official">Un site officiel de l'État luxembourgeois</span>
+    </a>
+    <div class="utility-right">
+      <a class="a11y-link" href="#0">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="4" r="1.6" fill="currentColor" stroke="none"/><path d="M4 8h16M9 8v5l-2 6M15 8v5l2 6M9 13h6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="util.a11y">Accessibilité</span>
+      </a>
+      <nav class="lang" aria-label="Langue / Sprache / Language">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER · composant « en-tête + navigation » ============ -->
+<header class="header" data-component="En-tête + navigation principale">
+  <div class="header-bar">
+    <div class="wrap">
+      <a class="brand" href="Accueil.html" aria-label="AAA — Association d'assurance accident, accueil">
+        <span class="aaa-mark">
+          <img class="aaa-logo-img" src="assets/logo.png" alt="AAA — Association d'assurance accident" width="229" height="120">
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <button class="icon-btn" type="button" data-i18n-aria="header.searchAria" aria-label="Rechercher sur le site">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <a class="btn btn--red btn-declare" href="Accident du travail et de trajet.html">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          <span class="label" data-i18n="header.declare">Déclarer un accident</span>
+        </a>
+        <button class="icon-btn burger" type="button" aria-expanded="false" data-i18n-aria="header.menu" aria-label="Menu">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="mainnav" aria-label="Navigation principale">
+    <div class="wrap">
+      <ul>
+        <li class="has-sub">
+          <a href="#0" data-i18n="nav.aaa" aria-haspopup="true" aria-expanded="false">L'AAA<svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav"><ul>
+            <li><a href="#0" data-i18n="sm.aaa.vision">Vision</a></li>
+            <li><a href="#0" data-i18n="sm.aaa.mission">Mission</a></li>
+            <li><a href="#0" data-i18n="sm.aaa.orga">Organisation</a></li>
+            <li><a href="#0" data-i18n="sm.aaa.rapport">Rapport annuel & statistiques</a></li>
+            <li><a href="#0" data-i18n="sm.aaa.iso">Démarche qualité</a></li>
+          </ul></div>
+        </li>
+        <li class="has-sub">
+          <a href="#0" data-i18n="nav.sst" aria-haspopup="true" aria-expanded="false">Sécurité &amp; santé au travail<svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav"><ul>
+            <li><a href="#0" data-i18n="sm.sst.conseil">Conseil SST</a></li>
+            <li><a href="Recommandation de prevention.html" data-i18n="sm.sst.reco">Recommandations de prévention</a></li>
+            <li><a href="#0" data-i18n="sm.sst.formations">Formations</a></li>
+            <li><a href="#0" data-i18n="sm.sst.regl">Réglementation</a></li>
+            <li><a href="#0" data-i18n="sm.sst.label">Label « Sécher a Gesond »</a></li>
+            <li><a href="#0" data-i18n="sm.sst.vz">VISION ZERO</a></li>
+          </ul></div>
+        </li>
+        <li class="has-sub">
+          <a href="#0" data-i18n="nav.accidents" aria-haspopup="true" aria-expanded="false">Accidents &amp; maladies prof.<svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav"><ul>
+            <li><a href="Accident du travail et de trajet.html" data-i18n="sm.acc.travail">Accident du travail / de trajet</a></li>
+            <li><a href="#0" data-i18n="sm.acc.scolaire">Accident scolaire / périscolaire</a></li>
+            <li><a href="#0" data-i18n="sm.acc.maladies">Maladies professionnelles</a></li>
+          </ul></div>
+        </li>
+        <li class="has-sub">
+          <a href="#0" data-i18n="nav.prestations" aria-haspopup="true" aria-expanded="false">Prestations &amp; cotisations<svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav"><ul>
+            <li><a href="#0" data-i18n="sm.pre.assurees">Personnes assurées</a></li>
+            <li><a href="#0" data-i18n="sm.pre.indemn">Indemnisations</a></li>
+            <li><a href="#0" data-i18n="sm.pre.cotis">Cotisations</a></li>
+            <li><a href="#0" data-i18n="sm.pre.videos">Vidéos explicatives</a></li>
+          </ul></div>
+        </li>
+        <li class="has-sub">
+          <a href="#0" data-i18n="nav.doc" aria-haspopup="true" aria-expanded="false">Documentation<svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav"><ul>
+            <li><a href="#0" data-i18n="sm.doc.formulaires">Formulaires</a></li>
+            <li><a href="#0" data-i18n="sm.doc.publications">Publications</a></li>
+            <li><a href="#0" data-i18n="sm.doc.legis">Législations / Jurisprudence</a></li>
+          </ul></div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- mobile nav drawer -->
+<div class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="panel">
+    <div class="mn-head">
+      <img class="aaa-logo-img" src="assets/logo.png" alt="AAA" width="229" height="120" style="height:44px;">
+      <button class="icon-btn" type="button" data-close data-i18n-aria="header.close" aria-label="Fermer">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <a class="mn-top" href="#0" data-i18n="nav.aaa">L'AAA</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.aaa.vision">Vision</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.aaa.mission">Mission</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.aaa.orga">Organisation</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.aaa.rapport">Rapport annuel & statistiques</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.aaa.iso">Démarche qualité</a>
+    <a class="mn-top" href="#0" data-i18n="nav.sst">Sécurité &amp; santé au travail</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.sst.conseil">Conseil SST</a>
+    <a class="mn-sub" href="Recommandation de prevention.html" data-i18n="sm.sst.reco">Recommandations de prévention</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.sst.formations">Formations</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.sst.regl">Réglementation</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.sst.label">Label « Sécher a Gesond »</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.sst.vz">VISION ZERO</a>
+    <a class="mn-top" href="#0" data-i18n="nav.accidents">Accidents &amp; maladies prof.</a>
+    <a class="mn-sub" href="Accident du travail et de trajet.html" data-i18n="sm.acc.travail">Accident du travail / de trajet</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.acc.scolaire">Accident scolaire / périscolaire</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.acc.maladies">Maladies professionnelles</a>
+    <a class="mn-top" href="#0" data-i18n="nav.prestations">Prestations &amp; cotisations</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.pre.assurees">Personnes assurées</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.pre.indemn">Indemnisations</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.pre.cotis">Cotisations</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.pre.videos">Vidéos explicatives</a>
+    <a class="mn-top" href="#0" data-i18n="nav.doc">Documentation</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.doc.formulaires">Formulaires</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.doc.publications">Publications</a>
+    <a class="mn-sub" href="#0" data-i18n="sm.doc.legis">Législations / Jurisprudence</a>
+  </div>
+</div>
+
+  <main id="main">
+    <nav class="breadcrumb wrap" aria-label="Fil d'Ariane" data-component="Fil d'Ariane">
+      <ol>
+        <li><a href="Accueil.html">Accueil</a></li>
+        <li><a href="#0">Documentation</a></li>
+        <li aria-current="page">Système de design</li>
+      </ol>
+    </nav>
+
+    <section class="ds-hero">
+      <div class="wrap">
+        <span class="eyebrow">Documentation · Renow / CTIE</span>
+        <h1>Système de design AAA</h1>
+        <p>Le langage visuel et la bibliothèque de composants de la refonte du site de l'Association d'assurance accident. Fondé sur la charte officielle AAA, aligné sur le référentiel <strong>Renow</strong> et structuré pour une intégration <strong>AEM</strong> par composants réutilisables.</p>
+        <div class="ds-meta">
+          <span class="tagpill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-3Z"/></svg>Charte AAA</span>
+          <span class="tagpill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>AEM Core Components</span>
+          <span class="tagpill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4" r="1.6"/><path d="M4 8h16M9 8v5l-2 6M15 8v5l2 6M9 13h6"/></svg>RGAA 4.1 · WCAG 2.1 AA</span>
+          <span class="tagpill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18Z"/></svg>FR · DE · EN</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap ds-shell">
+      <nav class="ds-nav" aria-label="Sommaire">
+        <h2>Sommaire</h2>
+        <ul>
+          <li><a href="#principes" class="is-active">Principes</a></li>
+          <li><a href="#marque">Marque &amp; logos</a></li>
+          <li><a href="#couleurs">Couleurs</a></li>
+          <li><a href="#typographie">Typographie</a></li>
+          <li><a href="#fondations">Espacement &amp; styles</a></li>
+          <li><a href="#composants">Composants</a></li>
+          <li><a href="#aem">Correspondance AEM</a></li>
+          <li><a href="#accessibilite">Accessibilité</a></li>
+          <li><a href="#multilingue">Multilingue</a></li>
+        </ul>
+      </nav>
+
+      <div class="ds-main">
+
+        <section class="ds-section" id="principes">
+          <div class="ds-head">
+            <span class="kicker"><span class="num">01</span>Principes</span>
+            <h2>Quatre principes directeurs</h2>
+            <p>Ils guident chaque décision de design et garantissent la cohérence d'un site de service public : clair, fiable, accessible et modulaire.</p>
+          </div>
+          <div class="principles">
+            <div class="principle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15 9-2 4-4 2 2-4 4-2Z"/></svg><h3>Orienté usager</h3><p>Les tâches d'abord : déclarer, se renseigner, télécharger. Le contenu institutionnel vient ensuite.</p></div>
+            <div class="principle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-3Z"/></svg><h3>Confiance institutionnelle</h3><p>Sobriété, hiérarchie nette, marque de l'État. Le rouge corail est réservé à l'urgence et à l'action.</p></div>
+            <div class="principle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4" r="1.6"/><path d="M4 8h16M9 8v5l-2 6M15 8v5l2 6M9 13h6"/></svg><h3>Accessible par défaut</h3><p>RGAA 4.1 / WCAG 2.1 AA intégré dès la conception : contraste, focus, clavier, sémantique.</p></div>
+            <div class="principle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4a2 2 0 1 1 4 0c0 1 1 1 2 1h2v3c0 1 0 2 1 2a2 2 0 1 1 0 4c-1 0-1 1-1 2v3h-3c-1 0-1-1-2-1a2 2 0 1 0-4 0c-1 0-1 1-2 1H4v-3c0-1-1-1-2-1a2 2 0 1 1 0-4c1 0 2 0 2-1V5h3c1 0 2 0 2-1Z"/></svg><h3>Modulaire (AEM)</h3><p>Chaque écran est un assemblage de composants réutilisables, mappés aux AEM Core Components.</p></div>
+          </div>
+        </section>
+
+        <section class="ds-section" id="marque">
+          <div class="ds-head">
+            <span class="kicker"><span class="num">02</span>Marque</span>
+            <h2>Marque &amp; logos</h2>
+            <p>Le logo AAA s'accompagne de la marque de l'État luxembourgeois (lionceau rouge). Réserve d'espace et fonds autorisés sont normalisés.</p>
+          </div>
+          <div class="logo-grid">
+            <div class="logo-cell"><div class="logo-stage on-paper"><img src="assets/logo.png" alt="Logo AAA, version principale couleur"></div><div class="logo-cap">Principal · sur fond blanc</div></div>
+            <div class="logo-cell"><div class="logo-stage on-soft"><img src="assets/logo.png" alt="Logo AAA sur fond clair"></div><div class="logo-cap">Sur fond clair (gris/paper)</div></div>
+            <div class="logo-cell"><div class="logo-stage on-navy"><img src="assets/logo-white.png" alt="Logo AAA en réserve blanche"></div><div class="logo-cap">Réserve blanche · fond bleu foncé</div></div>
+            <div class="logo-cell"><div class="logo-stage on-paper"><img src="assets/lion-lu.png" alt="Marque de l'État : lionceau rouge"></div><div class="logo-cap">Marque de l'État (gouvernement.lu)</div></div>
+          </div>
+          <div class="logo-rules">
+            <div class="logo-rule do"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><div><strong>Zone de protection</strong><span>Conserver autour du logo un espace libre ≥ la hauteur du sigle « AAA ».</span></div></div>
+            <div class="logo-rule do"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><div><strong>Co-signature État</strong><span>Associer la marque de l'État dans le bandeau officiel en en-tête.</span></div></div>
+            <div class="logo-rule dont"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><div><strong>Ne pas déformer</strong><span>Aucune distorsion, rotation, ombre portée ni recoloration du logo.</span></div></div>
+            <div class="logo-rule dont"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><div><strong>Contraste insuffisant</strong><span>Ne pas poser la version couleur sur un fond bleu ou photographique chargé.</span></div></div>
+          </div>
+        </section>
+
+        <section class="ds-section" id="couleurs">
+          <div class="ds-head">
+            <span class="kicker"><span class="num">03</span>Couleurs</span>
+            <h2>Palette</h2>
+            <p>Palette web issue de la charte AAA. Chaque couleur de texte respecte un ratio de contraste AA. Le badge indique le ratio sur la couleur (texte blanc ou foncé selon le cas).</p>
+          </div>
+          <h3 class="ds-sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="8" cy="10" r="1.2" fill="currentColor"/><circle cx="12" cy="8" r="1.2" fill="currentColor"/><circle cx="16" cy="10" r="1.2" fill="currentColor"/></svg> Bleus de marque</h3>
+          <div class="swatch-grid">
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#0061A1"><span class="ratio ko">4.9:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Bleu primaire</div>
+      <div class="swatch-token">--aaa-blue</div>
+      <div class="swatch-hex">#0061A1</div>
+      <div class="swatch-use">Liens, boutons, accents</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#094280"><span class="ratio ko">8.6:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Bleu médian</div>
+      <div class="swatch-token">--aaa-blue-700</div>
+      <div class="swatch-hex">#094280</div>
+      <div class="swatch-use">Hover / pressé</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#0C2D69"><span class="ratio ko">12.4:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Bleu foncé</div>
+      <div class="swatch-token">--aaa-blue-900</div>
+      <div class="swatch-hex">#0C2D69</div>
+      <div class="swatch-use">Footer, bandeaux, titres KO</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#AAC9E2"><span class="ratio">—</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Bleu clair</div>
+      <div class="swatch-token">--aaa-blue-light</div>
+      <div class="swatch-hex">#AAC9E2</div>
+      <div class="swatch-use">Décoratif, illustrations</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#F2F8FE"><span class="ratio">—</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Fond bleu 050</div>
+      <div class="swatch-token">--aaa-blue-050</div>
+      <div class="swatch-hex">#F2F8FE</div>
+      <div class="swatch-use">Aplats de section, chips</div>
+    </div>
+  </div>
+          </div>
+          <h3 class="ds-sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg> Corail &amp; alerte</h3>
+          <div class="swatch-grid">
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#BD4653"><span class="ratio ko">4.6:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Rouge bouton</div>
+      <div class="swatch-token">--aaa-red</div>
+      <div class="swatch-hex">#BD4653</div>
+      <div class="swatch-use">Bouton « Déclarer », urgence</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#9F3845"><span class="ratio ko">6.3:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Rouge hover</div>
+      <div class="swatch-token">--aaa-red-700</div>
+      <div class="swatch-hex">#9F3845</div>
+      <div class="swatch-use">Hover bouton rouge</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#DE5261"><span class="ratio ko">3.4:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Corail accent</div>
+      <div class="swatch-token">--aaa-coral</div>
+      <div class="swatch-hex">#DE5261</div>
+      <div class="swatch-use">Accent graphique (charte)</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#FDEFF0"><span class="ratio">—</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Fond corail</div>
+      <div class="swatch-token">--aaa-red-050</div>
+      <div class="swatch-hex">#FDEFF0</div>
+      <div class="swatch-use">Aplats alerte légère</div>
+    </div>
+  </div>
+          </div>
+          <h3 class="ds-sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg> Neutres &amp; texte</h3>
+          <div class="swatch-grid">
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#2E2E2D"><span class="ratio ko">14.8:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Encre titres</div>
+      <div class="swatch-token">--ink</div>
+      <div class="swatch-hex">#2E2E2D</div>
+      <div class="swatch-use">Titres</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#434342"><span class="ratio ko">10.6:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Encre corps</div>
+      <div class="swatch-token">--ink-body</div>
+      <div class="swatch-hex">#434342</div>
+      <div class="swatch-use">Texte courant</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#6E6E6D"><span class="ratio ko">5.2:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Encre secondaire</div>
+      <div class="swatch-token">--ink-muted</div>
+      <div class="swatch-hex">#6E6E6D</div>
+      <div class="swatch-use">Texte secondaire</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#E0E4E8"><span class="ratio">—</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Hairline</div>
+      <div class="swatch-token">--line</div>
+      <div class="swatch-hex">#E0E4E8</div>
+      <div class="swatch-use">Filets, bordures</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#F7F9FB"><span class="ratio">—</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Surface alt</div>
+      <div class="swatch-token">--surface-alt</div>
+      <div class="swatch-hex">#F7F9FB</div>
+      <div class="swatch-use">Fonds alternés</div>
+    </div>
+  </div>
+          </div>
+          <h3 class="ds-sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-3Z"/></svg> VISION ZERO · univers co-brandé</h3>
+          <div class="swatch-grid">
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#443B39"><span class="ratio ko">9.7:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Brun chaud VZ</div>
+      <div class="swatch-token">--vz-ink</div>
+      <div class="swatch-hex">#443B39</div>
+      <div class="swatch-use">Texte sur papier VZ</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#F7F4EC"><span class="ratio">—</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Crème VZ</div>
+      <div class="swatch-token">--vz-cream</div>
+      <div class="swatch-hex">#F7F4EC</div>
+      <div class="swatch-use">Fond papier VZ</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#B42120"><span class="ratio ko">5.9:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Sécurité</div>
+      <div class="swatch-token">--vz-red</div>
+      <div class="swatch-hex">#B42120</div>
+      <div class="swatch-use">Pilier Sécurité</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#2C77A3"><span class="ratio ko">4.7:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Santé</div>
+      <div class="swatch-token">--vz-blue-txt</div>
+      <div class="swatch-hex">#2C77A3</div>
+      <div class="swatch-use">Pilier Santé (texte AA)</div>
+    </div>
+  </div>
+            <div class="swatch">
+    <div class="swatch-chip" style="background:#6C711A"><span class="ratio ko">4.8:1</span></div>
+    <div class="swatch-body">
+      <div class="swatch-name">Bien-être</div>
+      <div class="swatch-token">--vz-olive-txt</div>
+      <div class="swatch-hex">#6C711A</div>
+      <div class="swatch-use">Pilier Bien-être (texte AA)</div>
+    </div>
+  </div>
+          </div>
+        </section>
+
+        <section class="ds-section" id="typographie">
+          <div class="ds-head">
+            <span class="kicker"><span class="num">04</span>Typographie</span>
+            <h2>Échelle typographique</h2>
+            <p>Une seule famille : <strong>Nunito</strong> (sans-serif humaniste, lisible et chaleureuse). La charte prévoit <strong>Geomanist</strong> en titrage ; Nunito en est la substitution web licence-libre. Corps de texte ≥ 17px.</p>
+          </div>
+          <div class="type-spec">
+            <div class="type-row"><div class="sample s-hero">Comment l'AAA peut-elle vous aider&nbsp;?</div><div class="meta"><b>Hero</b>--fs-hero<br>clamp 2.4–3.6rem · 800</div></div>
+            <div class="type-row"><div class="sample s-h1">Titre de page (H1)</div><div class="meta"><b>H1</b>--fs-h1<br>clamp 2–2.7rem · 800</div></div>
+            <div class="type-row"><div class="sample s-h2">Titre de section (H2)</div><div class="meta"><b>H2</b>--fs-h2<br>clamp 1.55–2.05rem · 800</div></div>
+            <div class="type-row"><div class="sample s-h3">Titre de carte (H3)</div><div class="meta"><b>H3</b>--fs-h3<br>1.3rem · 700</div></div>
+            <div class="type-row"><div class="sample s-lead">Chapô introductif posé sous les titres de page.</div><div class="meta"><b>Lead</b>--fs-lead<br>1.3rem · 400</div></div>
+            <div class="type-row"><div class="sample s-body">Texte courant. Le corps utilise Nunito à 17px pour un confort de lecture optimal sur écran.</div><div class="meta"><b>Body</b>--fs-body<br>1.0625rem (17px) · 400</div></div>
+            <div class="type-row"><div class="sample s-bold">Étiquette / emphase</div><div class="meta"><b>Bold</b>--fs-body<br>17px · 800</div></div>
+            <div class="type-row"><div class="sample s-small">Métadonnées, légendes, mentions.</div><div class="meta"><b>Small</b>--fs-small<br>0.9375rem (15px) · 600</div></div>
+          </div>
+        </section>
+
+        <section class="ds-section" id="fondations">
+          <div class="ds-head">
+            <span class="kicker"><span class="num">05</span>Fondations</span>
+            <h2>Espacement, rayons &amp; ombres</h2>
+            <p>Une grille de 8 points cadence tous les espacements. Rayons modérés (éditorial, pas « bubbly ») et ombres douces teintées bleu plutôt que grises.</p>
+          </div>
+          <div class="spec-cols">
+            <div class="spec-card">
+              <h3 class="ds-sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h18v8H3zM7 8v3M11 8v4M15 8v3M19 8v4"/></svg> Échelle d'espacement (8pt)</h3>
+              <div class="scale-row"><span class="bar" style="width:4px"></span><span class="lbl"><b>--s1</b> 4px</span></div>
+              <div class="scale-row"><span class="bar" style="width:8px"></span><span class="lbl"><b>--s2</b> 8px</span></div>
+              <div class="scale-row"><span class="bar" style="width:12px"></span><span class="lbl"><b>--s3</b> 12px</span></div>
+              <div class="scale-row"><span class="bar" style="width:16px"></span><span class="lbl"><b>--s4</b> 16px</span></div>
+              <div class="scale-row"><span class="bar" style="width:24px"></span><span class="lbl"><b>--s5</b> 24px</span></div>
+              <div class="scale-row"><span class="bar" style="width:32px"></span><span class="lbl"><b>--s6</b> 32px</span></div>
+              <div class="scale-row"><span class="bar" style="width:48px"></span><span class="lbl"><b>--s7</b> 48px</span></div>
+              <div class="scale-row"><span class="bar" style="width:64px"></span><span class="lbl"><b>--s8</b> 64px</span></div>
+              <div class="scale-row"><span class="bar" style="width:96px"></span><span class="lbl"><b>--s9</b> 96px</span></div>
+            </div>
+            <div class="spec-card">
+              <h3 class="ds-sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg> Rayons</h3>
+              <div class="radius-row"><span class="radius-demo" style="border-radius:6px"></span><span class="lbl"><b>--r-sm</b> 6px · chips, champs</span></div>
+              <div class="radius-row"><span class="radius-demo" style="border-radius:10px"></span><span class="lbl"><b>--r</b> 10px · boutons icône</span></div>
+              <div class="radius-row"><span class="radius-demo" style="border-radius:16px"></span><span class="lbl"><b>--r-lg</b> 16px · cartes</span></div>
+              <div class="radius-row"><span class="radius-demo" style="border-radius:24px"></span><span class="lbl"><b>--r-xl</b> 24px · blocs héro</span></div>
+              <div class="radius-row"><span class="radius-demo" style="border-radius:999px;width:72px"></span><span class="lbl"><b>--r-pill</b> · boutons, onglets</span></div>
+              <h3 class="ds-sub" style="margin-top:28px">Ombres</h3>
+              <div class="shadow-row"><span class="shadow-demo" style="box-shadow:0 1px 2px rgba(0,97,161,0.06)"></span><span class="lbl"><b>--sh-1</b> repos</span></div>
+              <div class="shadow-row"><span class="shadow-demo" style="box-shadow:0 6px 20px -8px rgba(0,97,161,0.16)"></span><span class="lbl"><b>--sh-2</b> survol carte</span></div>
+              <div class="shadow-row"><span class="shadow-demo" style="box-shadow:0 18px 44px -18px rgba(0,97,161,0.24)"></span><span class="lbl"><b>--sh-3</b> éléments flottants</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ds-section" id="composants">
+          <div class="ds-head">
+            <span class="kicker"><span class="num">06</span>Composants</span>
+            <h2>Bibliothèque de composants</h2>
+            <p>Chaque composant est un bloc autonome, traduisible et accessible — pensé pour être édité par un contributeur dans AEM. Le tag <span class="cmp-aem">AEM</span> indique le Core Component correspondant.</p>
+          </div>
+
+          <h3 class="ds-sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg> Boutons</h3>
+          <div class="cmp-block">
+            <div class="cmp-stage on-paper">
+              <a class="btn btn--primary" href="#0">Bouton primaire <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--red" href="#0">Déclarer un accident</a>
+              <a class="btn btn--ghost" href="#0">Bouton secondaire</a>
+              <a class="btn btn--white" href="#0" style="background:var(--aaa-blue-050)">Bouton clair</a>
+            </div>
+            <div class="cmp-foot">
+              <span class="ff"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><b>Hauteur 48px</b> (cible tactile ≥ 44px)</span>
+              <span class="ff"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Pilule · focus visible 3px</span>
+              <span class="ff">Rouge = action / urgence uniquement</span>
+              <span class="cmp-aem">AEM · Button</span>
+            </div>
+          </div>
+
+          <h3 class="ds-sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg> Carte d'accès rapide</h3>
+          <div class="cmp-block">
+            <div class="cmp-stage">
+              <a class="qa-card" href="#0" style="max-width:300px">
+                <span class="qa-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg></span>
+                <h3>Mes démarches</h3>
+                <p>Suivi de votre dossier, indemnités et prise en charge des soins.</p>
+                <span class="more">Accéder <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </a>
+              <a class="qa-card qa-card--urgent" href="#0" style="max-width:300px">
+                <span class="qa-tag"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 8v4M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg>Urgent · sous 24h</span>
+                <span class="qa-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 0 1 10 0v6M5 18h14M9 22h6"/></svg></span>
+                <h3>Déclarer un accident</h3>
+                <p>Accident du travail, de trajet ou scolaire : lancez la déclaration.</p>
+                <span class="more">Accéder <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </a>
+            </div>
+            <div class="cmp-foot">
+              <span class="ff"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Carte entièrement cliquable</span>
+              <span class="ff"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Variante « urgent » (corail)</span>
+              <span class="cmp-aem">AEM · Teaser</span>
+            </div>
+          </div>
+
+          <h3 class="ds-sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg> Filtres à facettes &amp; chips</h3>
+          <div class="cmp-block">
+            <div class="cmp-stage">
+              <button class="chip-btn" type="button" aria-pressed="true">Construction <span class="chip-x"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></span></button>
+              <button class="chip-btn" type="button" aria-pressed="false">Industrie</button>
+              <button class="chip-btn" type="button" aria-pressed="false">Transport</button>
+              <button class="chip-btn" type="button" aria-pressed="true">Chutes de hauteur <span class="chip-x"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></span></button>
+            </div>
+            <div class="cmp-foot">
+              <span class="ff"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>État <b>aria-pressed</b> · retirable</span>
+              <span class="ff"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Compteur de résultats <b>aria-live</b></span>
+              <span class="cmp-aem">AEM · Tabs / List + facettes</span>
+            </div>
+          </div>
+
+          <h3 class="ds-sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg> Onglets &amp; fil d'Ariane</h3>
+          <div class="cmp-block">
+            <div class="cmp-stage col">
+              <nav class="breadcrumb" aria-label="Exemple de fil d'Ariane" style="padding:0">
+                <ol><li><a href="#0">Accueil</a></li><li><a href="#0">Sécurité &amp; santé</a></li><li aria-current="page">Recommandations</li></ol>
+              </nav>
+              <div class="ct-tablist" role="tablist" aria-label="Exemple d'onglets" style="margin:0">
+                <button type="button" role="tab" aria-selected="true">Prestations</button>
+                <button type="button" role="tab" aria-selected="false">Prévention</button>
+                <button type="button" role="tab" aria-selected="false">Bonus-malus</button>
+              </div>
+            </div>
+            <div class="cmp-foot">
+              <span class="ff"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Clavier ←/→/Home/End</span>
+              <span class="ff"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Sémantique <b>tablist/tab/tabpanel</b></span>
+              <span class="cmp-aem">AEM · Breadcrumb · Tabs</span>
+            </div>
+          </div>
+
+          <h3 class="ds-sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-3Z"/></svg> Encadré « En résumé »</h3>
+          <div class="cmp-block">
+            <div class="cmp-stage on-paper">
+              <aside class="resume" style="margin:0">
+                <span class="resume-ico" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2h6c0-.8.4-1.5 1-2A7 7 0 0 0 12 2Z"/></svg></span>
+                <div><h2 style="margin-bottom:12px">En résumé</h2><ul><li>Point clé pédagogique présenté en tête de page.</li><li>Trois points maximum, formulés à l'usager.</li></ul></div>
+              </aside>
+            </div>
+            <div class="cmp-foot">
+              <span class="ff"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Pattern « TL;DR » de service public</span>
+              <span class="cmp-aem">AEM · Text + List (Content Fragment)</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="ds-section" id="aem">
+          <div class="ds-head">
+            <span class="kicker"><span class="num">07</span>Intégration</span>
+            <h2>Correspondance AEM</h2>
+            <p>Tous les composants reposent sur des <strong>AEM Core Components</strong> standards — aucun widget exotique. Le contenu à longueur variable (multilingue, accordéons, cartes) est géré par des <strong>Content Fragments</strong>.</p>
+          </div>
+          <table class="aem-table">
+            <thead><tr><th>Composant AAA</th><th>AEM Core Component</th><th>Notes d'intégration</th></tr></thead>
+            <tbody>
+              <tr><td>En-tête + navigation</td><td><code>Navigation</code> · <code>Language Navigation</code></td><td>Multilingue par arborescence de langues (language copies).</td></tr>
+              <tr><td>Carrousel héro</td><td><code>Carousel</code></td><td>Autoplay + pause natifs. Slides = Content Fragments.</td></tr>
+              <tr><td>Carte d'accès / actualité</td><td><code>Teaser</code></td><td>Image + titre + texte + CTA. Variante « urgent » par style.</td></tr>
+              <tr><td>Fil d'Ariane</td><td><code>Breadcrumb</code></td><td>Généré depuis la hiérarchie de pages.</td></tr>
+              <tr><td>Onglets contact / service</td><td><code>Tabs</code></td><td>Chaque panneau = un Content Fragment « service ».</td></tr>
+              <tr><td>FAQ</td><td><code>Accordion</code></td><td>Items repliables, un seul ouvert par défaut.</td></tr>
+              <tr><td>Filtres à facettes</td><td><code>List</code> + recherche</td><td>Facettes secteur/risque ; tri ; pastilles d'état.</td></tr>
+              <tr><td>Recherche</td><td><code>Search</code></td><td>Indexation du contenu documentaire.</td></tr>
+              <tr><td>Bloc chiffres-clés / contenu</td><td><code>Text</code> · <code>Content Fragment</code></td><td>Données éditables sans toucher au gabarit.</td></tr>
+              <tr><td>Pied de page</td><td><code>Container</code> + <code>Navigation</code></td><td>Co-signature État, labels Renow/ISO/CTIE.</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="ds-section" id="accessibilite">
+          <div class="ds-head">
+            <span class="kicker"><span class="num">08</span>Accessibilité</span>
+            <h2>Référentiel RGAA / Renow</h2>
+            <p>L'accessibilité est intégrée dès la conception, conformément à l'obligation légale des sites publics luxembourgeois (RGAA 4.1 / WCAG 2.1, niveau AA visé).</p>
+          </div>
+          <div class="a11y-grid">
+            <div class="a11y-item"><span class="tick"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><strong>Contraste AA</strong><span>Texte ≥ 4.5:1, éléments graphiques ≥ 3:1. <span class="a11y-ref">RGAA 3.2/3.3</span></span></div></div>
+            <div class="a11y-item"><span class="tick"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><strong>Navigation clavier</strong><span>Tout est actionnable au clavier ; focus visible 3px. <span class="a11y-ref">RGAA 12.x</span></span></div></div>
+            <div class="a11y-item"><span class="tick"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><strong>Structure de titres</strong><span>Un seul H1, hiérarchie sans saut de niveau. <span class="a11y-ref">RGAA 9.1</span></span></div></div>
+            <div class="a11y-item"><span class="tick"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><strong>Alternatives textuelles</strong><span>Images porteuses de sens décrites ; décor en alt vide. <span class="a11y-ref">RGAA 1.x</span></span></div></div>
+            <div class="a11y-item"><span class="tick"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><strong>Couleur non porteuse seule</strong><span>L'urgence est doublée d'un libellé « Urgent ». <span class="a11y-ref">RGAA 3.1</span></span></div></div>
+            <div class="a11y-item"><span class="tick"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><strong>Cibles tactiles ≥ 44px</strong><span>Boutons, onglets, liens de navigation. <span class="a11y-ref">WCAG 2.5.5</span></span></div></div>
+            <div class="a11y-item"><span class="tick"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><strong>Mouvement maîtrisé</strong><span>Carrousel avec pause ; <b>prefers-reduced-motion</b> respecté. <span class="a11y-ref">RGAA 13.x</span></span></div></div>
+            <div class="a11y-item"><span class="tick"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><strong>Lien d'évitement</strong><span>« Aller au contenu » en tête de chaque page. <span class="a11y-ref">RGAA 12.7</span></span></div></div>
+            <div class="a11y-item"><span class="tick"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><strong>Langue déclarée</strong><span>Attribut <b>lang</b> mis à jour à chaque changement de langue. <span class="a11y-ref">RGAA 8.x</span></span></div></div>
+          </div>
+        </section>
+
+        <section class="ds-section" id="multilingue">
+          <div class="ds-head">
+            <span class="kicker"><span class="num">09</span>Multilingue</span>
+            <h2>FR · DE · EN — tolérance de longueur</h2>
+            <p>Les composants sont conçus pour absorber l'allemand (jusqu'à +40 % de longueur) sans casser la mise en page. Exemple sur un libellé de navigation&nbsp;:</p>
+          </div>
+          <div class="lang-demo">
+            <div class="lang-card"><div class="lc-head">Français <span class="len">29 car.</span></div><div class="lc-body"><div class="lbl">nav.sst</div><div class="val">Sécurité &amp; santé au travail</div></div></div>
+            <div class="lang-card"><div class="lc-head">Deutsch <span class="len">41 car.</span></div><div class="lc-body"><div class="lbl">nav.sst</div><div class="val">Sicherheit &amp; Gesundheit am Arbeitsplatz</div></div></div>
+            <div class="lang-card"><div class="lc-head">English <span class="len">21 car.</span></div><div class="lc-body"><div class="lbl">nav.sst</div><div class="val">Safety &amp; health at work</div></div></div>
+          </div>
+          <p style="margin-top:24px;color:var(--ink-muted);font-size:var(--fs-small)">En production AEM, le multilingue est porté par des <strong>language copies</strong> (une arborescence par langue) plutôt que par une bascule côté client — le design, lui, garantit que la maquette tient dans les trois langues.</p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+<!-- ============ FOOTER · composant « pied de page institutionnel » ============ -->
+<footer class="footer" data-component="Pied de page institutionnel">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="f-mark">
+          <img class="aaa-logo-img" src="assets/logo-white.png" alt="AAA — Association d'assurance accident" width="229" height="120" style="height:60px;">
+        </div>
+        <p data-i18n="footer.about">Établissement public sous la tutelle du Ministère de la Santé et de la Sécurité sociale. Prévention et indemnisation des accidents du travail, de trajet et des maladies professionnelles.</p>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.c1">Le site</h3>
+        <ul>
+          <li><a href="#0" data-i18n="footer.l.sitemap">Plan du site</a></li>
+          <li><a href="#0" data-i18n="footer.l.news">Actualités</a></li>
+          <li><a href="#0" data-i18n="footer.l.publications">Publications</a></li>
+          <li><a href="#0" data-i18n="footer.l.forms">Formulaires</a></li>
+          <li><a href="Systeme de design.html" data-i18n="footer.l.ds">Système de design</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.c2">Aide &amp; contact</h3>
+        <ul>
+          <li><a href="#0" data-i18n="footer.l.faq">FAQ</a></li>
+          <li><a href="#0" data-i18n="footer.l.contact">Contact</a></li>
+          <li><a href="#0" data-i18n="footer.l.jobs">Recrutement</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.c3">Informations légales</h3>
+        <ul>
+          <li><a href="#0" data-i18n="footer.l.a11y">Déclaration d'accessibilité</a></li>
+          <li><a href="#0" data-i18n="footer.l.legal">Mentions légales</a></li>
+          <li><a href="#0" data-i18n="footer.l.privacy">Protection des données</a></li>
+          <li><a href="#0" data-i18n="footer.l.cookies">Gestion des cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-badges">
+        <span class="f-badge">RENOW</span>
+        <span class="f-badge">ISO 9001:2015</span>
+        <span class="f-badge">RGAA · WCAG 2.1 AA</span>
+        <span class="f-badge">CTIE · gouvernement.lu</span>
+      </div>
+      <div class="footer-social">
+        <a href="#0" aria-label="LinkedIn"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM0 8h5v16H0V8Zm7.5 0h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5 5.05 0 6 3.3 6 7.6V24h-5v-7c0-1.7 0-3.8-2.4-3.8-2.4 0-2.7 1.8-2.7 3.7V24h-5V8Z"/></svg></a>
+        <a href="#0" aria-label="YouTube"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.8 12 4.8 12 4.8s-7 0-8.9.6A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.6 8.9.6 8.9.6s7 0 8.9-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.5 12 31 31 0 0 0 23 7.5ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg></a>
+        <a href="#0" aria-label="Newsletter"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      </div>
+    </div>
+    <p class="footer-legal" style="margin-top:24px;"><span data-i18n="footer.legal">© 2026 Association d'assurance accident — Cité de la sécurité sociale, Luxembourg.</span></p>
+  </div>
+</footer>
+
+<button class="cmp-toggle" type="button" aria-pressed="false">
+  <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+  <span data-i18n="cmp.show">Voir les composants</span>
+</button>
+
+<script src="aaa.js"></script>
+<script src="ds.js"></script>
+</body>
+</html>

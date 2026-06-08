@@ -137,6 +137,7 @@ const I18N = {
     "footer.l.news": "Actualités",
     "footer.l.publications": "Publications",
     "footer.l.forms": "Formulaires",
+    "footer.l.ds": "Système de design",
     "footer.l.faq": "FAQ",
     "footer.l.contact": "Contact",
     "footer.l.jobs": "Recrutement",
@@ -145,7 +146,8 @@ const I18N = {
     "footer.l.privacy": "Protection des données",
     "footer.l.cookies": "Gestion des cookies",
     "footer.legal": "© 2026 Association d'assurance accident — Cité de la sécurité sociale, Luxembourg.",
-    "cmp.show": "Voir les composants"
+    "cmp.show": "Voir les composants",
+    "cmp.dslink": "Voir le système de design"
   },
   de: {
     "util.official": "Eine offizielle Website des luxemburgischen Staates",
@@ -277,6 +279,7 @@ const I18N = {
     "footer.l.news": "Aktuelles",
     "footer.l.publications": "Publikationen",
     "footer.l.forms": "Formulare",
+    "footer.l.ds": "Designsystem",
     "footer.l.faq": "FAQ",
     "footer.l.contact": "Kontakt",
     "footer.l.jobs": "Stellenangebote",
@@ -285,7 +288,8 @@ const I18N = {
     "footer.l.privacy": "Datenschutz",
     "footer.l.cookies": "Cookie-Einstellungen",
     "footer.legal": "© 2026 Unfallversicherung (AAA) — Cité de la sécurité sociale, Luxemburg.",
-    "cmp.show": "Komponenten anzeigen"
+    "cmp.show": "Komponenten anzeigen",
+    "cmp.dslink": "Designsystem ansehen"
   },
   en: {
     "util.official": "An official website of the Luxembourg State",
@@ -417,6 +421,7 @@ const I18N = {
     "footer.l.news": "News",
     "footer.l.publications": "Publications",
     "footer.l.forms": "Forms",
+    "footer.l.ds": "Design system",
     "footer.l.faq": "FAQ",
     "footer.l.contact": "Contact",
     "footer.l.jobs": "Careers",
@@ -425,7 +430,8 @@ const I18N = {
     "footer.l.privacy": "Data protection",
     "footer.l.cookies": "Cookie settings",
     "footer.legal": "© 2026 Accident Insurance Association (AAA) — Cité de la sécurité sociale, Luxembourg.",
-    "cmp.show": "Show components"
+    "cmp.show": "Show components",
+    "cmp.dslink": "View the design system"
   }
 };
 
@@ -485,9 +491,22 @@ function applyAudience(aud) {
   // overlay composants
   const cmpBtn = document.querySelector(".cmp-toggle");
   if (cmpBtn) {
+    // raccourci vers la page Système de design (sauf si on y est déjà)
+    let dsLink = null;
+    if (!document.querySelector(".ds-shell")) {
+      const lang = (function () { try { return localStorage.getItem("aaa-lang") || "fr"; } catch (e) { return "fr"; } })();
+      const label = { fr: "Voir le système de design", de: "Designsystem ansehen", en: "View the design system" }[lang] || "Voir le système de design";
+      dsLink = document.createElement("a");
+      dsLink.className = "cmp-dslink";
+      dsLink.href = "Systeme de design.html";
+      dsLink.hidden = true;
+      dsLink.innerHTML = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg><span data-i18n="cmp.dslink">' + label + '</span>';
+      cmpBtn.parentNode.insertBefore(dsLink, cmpBtn);
+    }
     cmpBtn.addEventListener("click", () => {
       const on = document.body.classList.toggle("show-components");
       cmpBtn.setAttribute("aria-pressed", String(on));
+      if (dsLink) dsLink.hidden = !on;
     });
   }
 
